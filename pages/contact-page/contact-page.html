@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+</head>
+<body>
+   <include id="header" src="../../components/header/header-component.html"></include>
+ <div class='content h-screen p-4 flex items-center justify-center'>
+      <div class='w-full h-full border p-4'>
+        <h2 class='text-4xl font-bold'>Contact</h2>
+
+        <div class='w-full h-[700px] flex'>
+    
+          <div class='w-[30%] flex p-4 flex-col justify-center h-full'>
+            <div class='flex items-center space-x-4'>
+              <img src="../../public/svg/icons-phone.svg" alt="">
+              <span class='text-xl font-bold'>Call To Us</span>
+            </div>
+
+            <p class='text-xl mt-4'>We are available 24/7, 7 days a week.</p>
+            <p class='text-xl'>Phone: +994 050 888 06</p>
+
+            <hr class='block my-4'>
+
+            <div class='flex items-center space-x-4'>
+              <img src="../../public/svg/icons-mail.svg" alt="">
+              <span class='text-xl font-bold'>Write To Us</span>
+            </div>
+
+            <p class='text-xl mt-4'>Fill out our form and we will contact you within 24 hours.</p>
+            <p class='text-xl'>Emails: nadir.karimzade@gmail.com </p>
+            <p>Emails : nadir.karimzade@gmail.com </p>
+          </div>
+
+          <div class="w-[70%] flex items-center justify-around h-full">
+            <div class="shadow p-4 border w-[80%] h-[80%]">
+              <ul class='flex justify-between'>
+                <li>
+                  <p>Your name</p>
+                  <input placeholder="Enter name" class="px-3 py-2 border bg-white" type="text"/>
+                </li>
+                <li>
+                  <p>Your email</p>
+                  <input placeholder="Enter email" class="px-3 py-2 border bg-white" type="text"/>
+                </li>
+                <li>
+                  <p>Your phone</p>
+                  <input 
+                    placeholder="Enter phone" 
+                    class="px-3 py-2 border bg-white" 
+                    type="text" 
+                  />
+                </li>
+              </ul>
+
+              <p>Your message</p>
+              <textarea class="bg-white border h-[200px] w-full" cols="5" name="" id=""></textarea>
+
+              <button class="px-3 py-2 text-white bg-red-500 hover:bg-red-600 rounded-md font-medium text-xl cursor-pointer">Send message</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <include id="footer" src="../../components/footer/footer-component.html"></include>
+    <script type="module" src="../../utils/includes.js"></script>
+</body>
+</html>

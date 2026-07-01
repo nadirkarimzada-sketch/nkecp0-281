@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 0;
+        }
+
+        header {
+            padding: 20px 0 !important;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        
+        .product-main {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .product-gallery {
+            flex: 1;
+            background-color: #f5f5f5;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 350px;
+        }
+
+        .product-gallery img {
+            max-width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .product-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .rating-stock {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .star-icon {
+            width: 14px;
+            height: 14px;
+        }
+
+        .stock-status { color: #00ff66; font-weight: 500; }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .btn-add-to-cart {
+            background-color: #db4444;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            width: fit-content;
+            transition: background 0.2s;
+            margin-bottom: 25px;
+        }
+
+        .btn-add-to-cart:hover {
+            background-color: #bd3535;
+        }
+
+        .delivery-info {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .delivery-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .delivery-item:first-child {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .delivery-icon {
+            font-size: 24px;
+        }
+
+        .delivery-text h4 {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .delivery-text p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .delivery-text a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        /* --- Похожие товары (Нижняя секция) --- */
+        .related-section {
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .related-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .red-badge {
+            width: 12px;
+            height: 25px;
+            background-color: #db4444;
+            border-radius: 4px;
+        }
+
+        .related-title {
+            font-size: 16px;
+            color: #db4444;
+            font-weight: 600;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 15fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image-wrapper {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .card-image-wrapper img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        .card-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-prices {
+            display: flex;
+            gap: 8px;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .current-price {
+            color: #db4444;
+            font-weight: 600;
+        }
+
+        .old-price {
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .card-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<include id="header" src="../../components/header/header-component.html"></include>
+
+<div class="container">
+
+    <section class="product-main">
+        <div class="product-gallery">
+            <img src="../../images/stars/purple.comp.png" alt="Havic HV G-92 Gamepad">
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">Havic HV G-92 Gamepad</h1>
+            
+            <div class="rating-stock">
+                <span class="stars">
+                    <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                </span>
+                <span>(150 Reviews)</span>
+                <span>|</span>
+                <span class="stock-status">In Stock</span>
+            </div>
+
+            <div class="price">$192.00</div>
+
+            <p class="description">
+                PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.
+            </p>
+
+            <button class="btn-add-to-cart">Add to cart</button>
+
+            <div class="delivery-info">
+                <div class="delivery-item">
+                    <span class="delivery-icon">🚚</span>
+                    <div class="delivery-text">
+                        <h4>Free Delivery</h4>
+                        <p><a href="#">Enter your postal code for Delivery Availability</a></p>
+                    </div>
+                </div>
+                <div class="delivery-item">
+                    <span class="delivery-icon">🔄</span>
+                    <div class="delivery-text">
+                        <h4>Return Delivery</h4>
+                        <p>Free 30 Days Delivery Returns. <a href="#">Details</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-section">
+        <div class="related-header">
+            <div class="red-badge"></div>
+            <h2 class="related-title">Related Item</h2>
+        </div>
+
+        <div class="related-grid">
+            
+            <div class="card">
+                <div class="card-image-wrapper">
+                    <img src="../../images/stars/controlelr.png" alt="Gamepad">
+                </div>
+                <div class="card-name">HAVIT HV-G92 Gamepad</div>
+                <div class="card-prices">
+                    <span class="current-price">$120</span>
+                    <span class="old-price">$160</span>
+                </div>
+                <div class="card-rating">
+                    <span class="stars">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    </span>
+                    <span>(88)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-wrapper">
+                    <img src="../../images/stars/keybord.png" alt="Keyboard">
+                </div>
+                <div class="card-name">AK-900 Wired Keyboard</div>
+                <div class="card-prices">
+                    <span class="current-price">$960</span>
+                    <span class="old-price">$1160</span>
+                </div>
+                <div class="card-rating">
+                    <span class="stars">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    </span>
+                    <span>(75)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-wrapper">
+                    <img src="../../images/stars/monitor.png" alt="Monitor">
+                </div>
+                <div class="card-name">IPS LCD Gaming Monitor</div>
+                <div class="card-prices">
+                    <span class="current-price">$370</span>
+                    <span class="old-price">$400</span>
+                </div>
+                <div class="card-rating">
+                    <span class="stars">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    </span>
+                    <span>(99)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-wrapper">
+                    <img src="../../images/stars/driver.png" alt="Cooler">
+                </div>
+                <div class="card-name">RGB liquid CPU Cooler</div>
+                <div class="card-prices">
+                    <span class="current-price">$160</span>
+                    <span class="old-price">$170</span>
+                </div>
+                <div class="card-rating">
+                    <span class="stars">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                        <img class="star-icon" src="../../images/stars/star.svg" alt="Star">
+                    </span>
+                    <span>(65)</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+    <include id="footer" src="../../components/footer/footer-component.html"></include>
+    <script type="module" src="../../utils/includes.js"></script>
+</body>
+</html>

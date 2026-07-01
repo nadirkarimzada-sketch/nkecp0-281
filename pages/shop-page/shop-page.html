@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store</title>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <include id="header" src="../../components/header/header-component.html"></include>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)]">
+      <aside class="space-y-6">
+        <div class="rounded-[32px] bg-white p-6 shadow-sm">
+          <h1 class="text-3xl font-semibold">Store</h1>
+          <div class="mt-6 space-y-5">
+            <div>
+              <label class="block text-sm font-medium text-slate-600 mb-2">Search</label>
+              <input type="text" placeholder="Search" class="w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200" />
+            </div>
+
+            <div>
+              <h2 class="text-xl font-semibold mb-3">By category</h2>
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="rounded-2xl bg-slate-100 px-4 py-3">Asus</li>
+                <li class="rounded-2xl bg-slate-100 px-4 py-3">Dell</li>
+                <li class="rounded-2xl bg-slate-100 px-4 py-3">Toshiba</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-semibold mb-3">By rating</h2>
+              <ul class="space-y-3 text-slate-700">
+                <li class="flex gap-2 items-center text-yellow-400">★★★★★</li>
+                <li class="flex gap-2 items-center text-yellow-400">★★★★</li>
+                <li class="flex gap-2 items-center text-yellow-400">★★★</li>
+                <li class="flex gap-2 items-center text-yellow-400">★★</li>
+                <li class="flex gap-2 items-center text-yellow-400">★</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="space-y-6">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h2 class="text-3xl font-semibold">Store</h2>
+          <div class="flex flex-wrap items-center gap-3">
+            <button class="rounded-full bg-red-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-red-600">All products</button>
+            <select class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200">
+              <option>By name</option>
+              <option>By price</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+          <article class="rounded-[32px] bg-white p-6 shadow-sm">
+            <img class="mx-auto h-52 w-full max-w-[260px] object-contain" src="../../images/stars/monitor.png" alt="Asus Rog 2020" />
+            <div class="mt-6 space-y-3 text-center">
+              <p class="text-lg font-semibold">Asus Rog 2020</p>
+              <p class="text-yellow-400">★★★★★</p>
+              <p class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white">999999999999999999999999.99$</p>
+              <button class="w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600">Add to basket</button>
+            </div>
+          </article>
+
+          <article class="rounded-[32px] bg-white p-6 shadow-sm">
+            <img class="mx-auto h-52 w-full max-w-[260px] object-contain" src="../../images/stars/monitor.png" alt="Asus Rog 2020" />
+            <div class="mt-6 space-y-3 text-center">
+              <p class="text-lg font-semibold">Asus Rog 2020</p>
+              <p class="text-yellow-400">★★★★★</p>
+              <p class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white">999999999999999999999999.99$</p>
+              <button class="w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600">Add to basket</button>
+            </div>
+          </article>
+
+          <article class="rounded-[32px] bg-white p-6 shadow-sm">
+            <img class="mx-auto h-52 w-full max-w-[260px] object-contain" src="../../images/stars/monitor.png" alt="Asus Rog 2020" />
+            <div class="mt-6 space-y-3 text-center">
+              <p class="text-lg font-semibold">Asus Rog 2020</p>
+              <p class="text-yellow-400">★★★★★</p>
+              <p class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white">999999999999999999999999.99$</p>
+              <button class="w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600">Add to basket</button>
+            </div>
+          </article>
+
+          <article class="rounded-[32px] bg-white p-6 shadow-sm">
+            <img class="mx-auto h-52 w-full max-w-[260px] object-contain" src="../../images/stars/monitor.png" alt="Asus Rog 2020" />
+            <div class="mt-6 space-y-3 text-center">
+              <p class="text-lg font-semibold">Asus Rog 2020</p>
+              <p class="text-yellow-400">★★★★★</p>
+              <p class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white">999999999999999999999999.99$</p>
+              <button class="w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600">Add to basket</button>
+            </div>
+          </article>
+
+          <article class="rounded-[32px] bg-white p-6 shadow-sm">
+            <img class="mx-auto h-52 w-full max-w-[260px] object-contain" src="../../images/stars/monitor.png" alt="Asus Rog 2020" />
+            <div class="mt-6 space-y-3 text-center">
+              <p class="text-lg font-semibold">Asus Rog 2020</p>
+              <p class="text-yellow-400">★★★★★</p>
+              <p class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white">999999999999999999999999.99$</p>
+              <button class="w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600">Add to basket</button>
+            </div>
+          </article>
+
+          <article class="rounded-[32px] bg-white p-6 shadow-sm">
+            <img class="mx-auto h-52 w-full max-w-[260px] object-contain" src="../../images/stars/monitor.png" alt="Asus Rog 2020" />
+            <div class="mt-6 space-y-3 text-center">
+              <p class="text-lg font-semibold">Asus Rog 2020</p>
+              <p class="text-yellow-400">★★★★★</p>
+              <p class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white">999999999999999999999999.99$</p>
+              <button class="w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600">Add to basket</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <include id="footer" src="../../components/footer/footer-component.html"></include>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script type="module" src="../../utils/includes.js"></script>
+</body>
+</html>
+

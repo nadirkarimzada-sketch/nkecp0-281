@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <include id="header" src="../../components/header/header-component.html"></include>
+
+    <main class="max-w-7xl mx-auto px-4 py-10">
+      <section class="rounded-[32px] bg-white p-8 shadow-sm">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div class="space-y-6">
+            <p class="text-sm uppercase tracking-[0.4em] text-orange-500">About</p>
+            <h1 class="text-5xl font-bold">Our Story</h1>
+            <div class="space-y-4 text-slate-700 leading-7">
+              <p>
+                Launched in 2015, Exclusive is South Asia's premier online shopping marketplace with an active presence in Bangladesh.
+                Supported by a wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sellers and 300 brands and
+                serves 3 million customers across the region.
+              </p>
+              <p>
+                Exclusive has more than 1 million products to offer and is growing very fast. Exclusive offers a diverse assortment in categories
+                ranging from consumer electronics to home accessories.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center">
+            <img class="w-full rounded-[32px] object-cover shadow-lg" src="../../images/stars/monitor.png" alt="About image" />
+          </div>
+        </div>
+
+        <div class="mt-16 grid gap-6 md:grid-cols-3">
+          <article class="rounded-[32px] bg-slate-50 p-6 text-center">
+            <h2 class="text-xl font-bold">Farhad Kerimov</h2>
+            <p class="mt-3 text-slate-600">Managing Director</p>
+          </article>
+          <article class="rounded-[32px] bg-slate-50 p-6 text-center">
+            <h2 class="text-xl font-bold">Nadir Karimzade</h2>
+            <p class="mt-3 text-slate-600">CEO</p>
+          </article>
+          <article class="rounded-[32px] bg-slate-50 p-6 text-center">
+            <h2 class="text-xl font-bold">Ayxan Kerimzade</h2>
+            <p class="mt-3 text-slate-600">Product Designer</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <include id="footer" src="../../components/footer/footer-component.html"></include>
+    <script type="module" src="../../utils/includes.js"></script>
+  </body>
+</html>

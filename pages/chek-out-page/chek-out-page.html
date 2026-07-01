@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <include id="header" src="../../components/header/header-component.html"></include>
+
+    <div class="content h-screen p-4 flex items-center justify-center">
+        <div class="border w-full h-full flex">
+            <div class="h-full w-[50%]">
+                <p class="text-xl mb-2">First Name</p>
+                <input class="bg-white border w-full rounded-lg px-3 py-2" type="text">
+
+                <p class="text-xl mb-2">Last Name</p>
+                <input class="bg-white border w-full rounded-lg px-3 py-2" type="text">
+
+                <p class="text-xl mb-2">State</p>
+                <select name="" id="" class="bg-white border w-full rounded-lg px-3 py-2">
+                    <option value="">Azrebaijan</option>
+                    <option value="">England</option>
+                    <option value="">Uruguay</option>
+                </select>
+
+                <p class="text-xl mb-2">City</p>
+                <input class="bg-white border w-full rounded-lg px-3 py-2" type="text">
+
+                <p class="text-xl mb-2">Adrees</p>
+                <input class="bg-white border w-full rounded-lg px-3 py-2" type="text">
+
+                <p class="text-xl mb-2">Zip</p>
+                <input class="bg-white border w-[200px] rounded-lg px-3 py-2" type="text">
+
+                <p class="text-xl mb-2">Tel</p>
+                <input class="bg-white border w-full rounded-lg px-3 py-2" type="tel">
+
+                <p class="text-xl mb-2">Email</p>
+                <input class="bg-white border w-full rounded-lg px-3 py-2" type="email">
+
+
+                <div class="flex space-x-2 flex items-center space-x-1 py-2">
+                    <input type="checkbox" class="w-5 h-5" name="" id="">
+                    <span>Agree to terms and conditions</span>
+                </div>
+            </div>
+            <div class="h-full w-[50%] p-4">
+                <img class="w-full" src="../../svg/Cards.png" alt="">
+                <p class="text-xl mb-2">Card Number</p>
+                <input class="bg-white border w-full rounded-lg px-3 py-2" type="number">
+
+                <div class="flex space-x-1">
+                    <div>
+                        <p class="text-xl mb-2">Expiration(MM)</p>
+                        <input class="bg-white border w-full rounded-lg px-3 py-2" type="email">
+                    </div>
+
+                    <div>
+                        <p class="text-xl mb-2">Expiration(YY)</p>
+                        <input class="bg-white border w-full rounded-lg px-3 py-2" type="email">
+                    </div>
+
+                    <div>
+                        <p class="text-xl mb-2">Card security code</p>
+                        <input class="bg-white border w-full rounded-lg px-3 py-2" type="email">
+                    </div>
+                </div>
+                <p class="flex justify-between text-xl py-4">
+                    <span>Subtotal</span>
+                    <span>999999999999999999999999.9999$</span>
+                </p>
+                <hr>
+                <p class="flex justify-between text-xl py-4">
+                    <span>Shipping</span>
+                    <span>99999999999999999999 ninety-nine trillion, nine hundred ninety-nine billion, nine hundred ninety-nine million, nine hundred ninety-nine thousand, nine hundred ninety-nine dollars and ninety-nine cents</span>
+                </p>
+                <hr>
+                <p class="flex justify-between text-xl py-4">
+                    <span>Total</span>
+                    <span>999999999999999999999999.9999$</span>
+                </p>
+                <hr>
+
+                <button class="bg-red-500 font-medium text-lg
+                 hover:bg-red-600 text-white rounded-lg px-3 py-2 mt-2 w-[200px]">Place order</button>
+            </div>
+        </div>
+    </div>
+
+    <include id="footer" src="../../components/footer/footer-component.html"></include>
+
+    <script type="module" src="../../utils/includes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>
