@@ -7,7 +7,88 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    
+    <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <include
+      id="header"
+      src="../../components/header/header-component.html"
+    ></include>
+
+    <div class="content h-screen flex items-center justify-center">
+      <form class="w-[400px]  space-y-3 p-3">
+        <h2 class="font-medium text-4xl text-center">Create product</h2>
+
+        <p>Brand</p>
+        <input
+          type="text"
+          class="w-full bg-white border border-gray-400 rounded-md px-1 py-2"
+        />
+
+        <p>Model</p>
+        <input
+          type="text"
+          class="w-full bg-white border border-gray-400 rounded-md px-1 py-2"
+        />
+
+        <p>Category</p>
+        <input
+          type="text"
+          class="w-full bg-white border border-gray-400 rounded-md px-1 py-2"
+        />
+
+        <p>Description</p>
+        <input
+          type="text"
+          class="w-full bg-white border h-[100px] w-[50px] border-gray-400 rounded-md px-1 py-2"
+          
+        />
+
+        <p>Price</p>
+        <input
+          type="text"
+          class="w-full bg-white border border-gray-400 rounded-md px-1 py-2"
+        />
+
+        <p>Image URL</p>
+        <input
+          type="text"
+          class="w-full bg-white border border-gray-400 rounded-md px-1 py-2"
+        />
+
+        <button
+          type="button"
+          disabled
+          class="w-full py-3 bg-blue-500 rounded-md text-white font-medium cursor-not-allowed opacity-70"
+        >
+          Save
+        </button>
+
+        <button
+          type="button"
+          disabled
+          class="w-full py-3 bg-yellow-500 rounded-md text-white font-medium cursor-not-allowed opacity-70"
+        >
+          Reset
+        </button>
+        
+      </form>
+    </div>
+
+    <include
+      id="footer"
+      src="../../components/footer/footer-component.html"
+    ></include>
+
+    <script type="module" src="../../utils/include.js"></script>
+  </body>
+</html>
     <include id="footer" src="../../components/footer/footer-component.html"></include>
     <script type="module" src="../../utils/includes.js"></script>
 </body>

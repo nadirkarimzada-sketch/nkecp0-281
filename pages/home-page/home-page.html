@@ -3,21 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Electronics Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+       
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white text-black">
    <include id="header" src="../../components/header/header-component.html"></include>
-    <h2>
-        Hello home
-    </h2>
 
-    
+   <section class="bg-black text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 pt-12 pb-6 text-center z-10 relative">
+        <div class="w-full max-w-2xl mx-auto overflow-hidden mb-6">
+          <img
+            src="../../images/home.page/boss iphone.jpg"
+            alt="Product Hero"
+            class="w-full h-auto object-contain mx-auto max-h-[450px]"
+          />
+        </div>
 
-   
+        <div class="flex justify-center space-x-2 pb-4">
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+          <span class="w-2 h-2 rounded-full bg-red-500"></span>
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+        </div>
+      </div>
+   </section>
 
-    
-    <include id="footer" src="../../components/footer/footer-component.html"></include>
-    <script type="module" src="../../utils/includes.js"></script>
-</body>
-</html> 
+   <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="mb-8">
+        <div class="flex items-center space-x-2 mb-2">
+            <span class="w-1.5 h-4 bg-red-500 inline-block rounded-xs"></span>
+            <span class="text-xs text-red-500 font-bold uppercase tracking-wider">This Month</span>
+        </div>
+        <h2 class="text-3xl font-bold tracking-tight">Store Collection</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-100 p-8 rounded-lg flex flex-col justify-between items-start min-h-[400px] relative overflow-hidden">
+          <div>
+            <h3 class="text-2xl font-bold mb-2">Headband</h3>
+            <a href="#" class="text-xs font-semibold underline text-gray-600 hover:text-black flex items-center">
+                Collection <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+          <div class="w-full flex justify-center items-center mt-4">
+            <img
+              src="../../images/home.page/i want this.png"
+              alt="Headband"
+              class="max-h-64 object-contain"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6">
+          <div class="bg-gray-100 p-8 rounded-lg flex justify-between items-center min-h-[190px]">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Earbuds</h3>
+              <a href="#" class="text-xs font-semibold underline text-gray-600 hover:text-black flex items-center">
+                  Collection <span class="ml-1">&rarr;</span>
+              </a>
+            </div>
+            <img
+              src="../../images/home.page/bluuthe bb.jpg"
+              alt="Earbuds"
+              class="w-40 h-40 object-contain"
+            />
+          </div>
+
+          <div class="bg-gray-100 p-8 rounded-lg flex justify-between items-center min-h-[190px]">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Accessories</h3>
+              <a href="#" class="text-xs font-semibold underline text-gray-600 hover:text-black flex items-center">
+                  Collection <span class="ml-1">&rarr;</span>
+              </a>
+            </div>
+            <img
+              src="../../images/home.page/charger .jpg"
+              alt="Accessories"
+              class="w-40 h-40 object-contain"
+            />
+          </div>
+        </div>
+      </div>
+   </section>
+
+   <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="mb-8">
+        <div class="flex items-center space-x-2 mb-2">
+            <span class="w-1.5 h-4 bg-red-500 inline-block rounded-xs"></span>
+            <span class="text-xs text-red-500 font-bold uppercase tracking-wider">Categories</span>
+        </div>
+        <h2 class="text-3xl font-bold tracking-tight">Promotion</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 rounded-lg overflow-hidden shadow-sm">
+        <div class="bg-stone-900 min-h-[350px] relative">
+          <img
+            src="../../images/home.page/human with bb.jpg"
+            alt="Person with Headphones"
+            class="w-full h-full object-cover object-bottom"
+          />
+        </div>
+
+        <div class="bg-[#fce39b] p-12 flex flex-col justify-center items-start">
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Promotion</span>
+          <h3 class="text-3xl font-bold text-gray-900 mb-2">
+            Hurry up! 40% OFF
+          </h3>
+          <p class="text-sm text-gray-700 mb-6">
+            Thos dance of high-tech are waiting for you
+          </p>
+
+          <div class="flex space-x-3 mb-8">
+            <div class="bg-white p-3 rounded text-center min-w-[65px] shadow-xs">
+              <span class="block text-xl font-bold text-black">02</span>
+              <span class="text-[10px] text-gray-500 uppercase font-medium">Days</span>
+            </div>
+            <div class="bg-white p-3 rounded text-center min-w-[65px] shadow-xs">
+              <span class="block text-xl font-bold text-black">12</span>
+              <span class="text-[10px] text-gray-500 uppercase font-medium">Hours</span>
+            </div>
+            <div class="bg-white p-3 rounded text-center min-w-[65px] shadow-xs">
+              <span class="block text-xl font-bold text-black">45</span>
+              <span class="text-[10px] text-gray-500 uppercase font-medium">Minutes</span>
+            </div>
+            <div class="bg-white p-3 rounded text-center min-w-[65px] shadow-xs">
+              <span class="block text-xl font-bold text-black">05</span>
+              <span class="text-[10px] text-gray-500 uppercase font-medium">Seconds</span>
+            </div>
+          </div>
+
+          <button class="bg-black text-white text-xs font-bold px-8 py-3.5 rounded-md hover:bg-gray-900 transition uppercase tracking-wider">
+            Shop now
+          </button>
+        </div>
+      </div>
+   </section>
+
+   <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="mb-8">
+        <div class="flex items-center space-x-2 mb-2">
+            <span class="w-1.5 h-4 bg-red-500 inline-block rounded-xs"></span>
+            <span class="text-xs text-red-500 font-bold uppercase tracking-wider">Our Products</span>
+        </div>
+        <h2 class="text-3xl font-bold tracking-tight">Special promotion</h2>
+      </div>
+
+      <div class="bg-[#16161a] text-white rounded-lg grid grid-cols-1 md:grid-cols-2 p-12 items-center relative overflow-hidden min-h-[350px]">
+        <div class="z-10">
+          <span class="text-xs text-gray-400 font-medium tracking-wide">Pro.Beyond.</span>
+          <h3 class="text-4xl md:text-5xl font-bold my-3 tracking-tight">
+            iPhone 14 <span class="font-extrabold text-white">Pro</span>
+          </h3>
+          <p class="text-sm text-gray-400 mb-8 max-w-sm">
+            Created to change everything for the better. For everyone.
+          </p>
+          <button class="border border-white text-xs font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-black transition">
+            Learn More
+          </button>
+        </div>
+        <div class="flex items-center justify-center mt-6 md:mt-0 relative h-full">
+          <img
+            src="../../images/home.page/67-iphone.png"
+            alt="iPhone 14 Pro"
+            class="max-h-[320px] object-contain md:absolute md:right-0 md:bottom-[-48px]"
+          />
+        </div>
+      </div>
+   </section>
+
+   <section class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold text-center text-red-500 mb-10 tracking-tight">
+        Feedback Corner
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-8 rounded-lg border border-gray-100 shadow-xs relative">
+          <span class="text-red-400 text-3xl font-serif block mb-2">“</span>
+          <h4 class="font-bold text-base mb-2 text-red-500">Emily Wilson</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Their customer service team was incredibly helpful and responsive. They answered all my questions and ensured a smooth transaction.
+          </p>
+        </div>
+
+        <div class="bg-[#fcd9d9] p-8 rounded-lg border border-red-200 shadow-xs relative">
+          <span class="text-red-500 text-3xl font-serif block mb-2">“</span>
+          <h4 class="font-bold text-base mb-2 text-red-600">Sarah Thompson</h4>
+          <p class="text-xs text-gray-800 leading-relaxed">
+            Absolutely love the quality and style of the clothing I purchased! From the website experience to checkout, it was a breeze. Highly recommended!
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg border border-gray-100 shadow-xs relative">
+          <span class="text-red-400 text-3xl font-serif block mb-2">“</span>
+          <h4 class="font-bold text-base mb-2 text-red-500">Olivia Martinez</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            I had a great experience shopping on this website. The customer service was helpful and standard delivery was fast!
+          </p>
+        </div>
+      </div>
+   </section>
+
+   <section class="max-w-7xl mx-auto px-4 py-12 mb-12">
+      <div class="mb-8">
+        <div class="flex items-center space-x-2 mb-2">
+            <span class="w-1.5 h-4 bg-red-500 inline-block rounded-xs"></span>
+            <span class="text-xs text-red-500 font-bold uppercase tracking-wider">Our Products</span>
+        </div>
+        <h2 class="text-3xl font-bold tracking-tight">Explore Our Products</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <div class="bg-gray-50 p-5 rounded-lg flex flex-col justify-between items-center text-center shadow-xs min-h-[380px]">
+          <div class="w-full h-44 mb-4 flex items-center justify-center overflow-hidden bg-transparent">
+            <img src="../../images/home.page/huawey.png" alt="Popular Products" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full">
+            <h4 class="font-bold text-sm mb-1 text-gray-900">Popular Products</h4>
+            <p class="text-[11px] text-gray-500 mb-4 line-clamp-2 px-2">Wide selection of high tech products at the best prices.</p>
+            <button class="w-full bg-white border border-gray-300 text-xs font-bold py-2 rounded hover:bg-black hover:text-white transition uppercase tracking-wider">
+              Shop Now
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-5 rounded-lg flex flex-col justify-between items-center text-center shadow-xs min-h-[380px]">
+          <div class="w-full h-44 mb-4 flex items-center justify-center overflow-hidden bg-transparent">
+            <img src="../../images/home.page/ipad.png" alt="Ipad Pro" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full">
+            <h4 class="font-bold text-sm mb-1 text-gray-900">Ipad Pro</h4>
+            <p class="text-[11px] text-gray-500 mb-4 line-clamp-2 px-2">Next-generation performance with incredible displays.</p>
+            <button class="w-full bg-white border border-gray-300 text-xs font-bold py-2 rounded hover:bg-black hover:text-white transition uppercase tracking-wider">
+              Shop Now
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-5 rounded-lg flex flex-col justify-between items-center text-center shadow-xs min-h-[380px]">
+          <div class="w-full h-44 mb-4 flex items-center justify-center overflow-hidden bg-transparent">
+            <img src="../../images/home.page/samsung.png" alt="Samsung Galaxy" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full">
+            <h4 class="font-bold text-sm mb-1 text-gray-900">Samsung Galaxy</h4>
+            <p class="text-[11px] text-gray-500 mb-4 line-clamp-2 px-2">Experience flexible multitasking with the newest foldable tech.</p>
+            <button class="w-full bg-white border border-gray-300 text-xs font-bold py-2 rounded hover:bg-black hover:text-white transition uppercase tracking-wider">
+              Shop Now
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-[#16161a] text-white p-5 rounded-lg flex flex-col justify-between items-center text-center shadow-xs min-h-[380px]">
+          <div class="w-full h-44 mb-4 flex items-center justify-center overflow-hidden bg-transparent">
+            <img src="../../images/home.page/mackbok" alt="Macbook Pro" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full">
+            <h4 class="font-bold text-sm mb-1 text-white">Macbook Pro</h4>
+            <p class="text-[11px] text-gray-400 mb-4 line-clamp-2 px-2">Powerhouse laptops designed for ultimate workflows.</p>
+            <button class="w-full bg-transparent border border-gray-600 text-xs font-bold py-2 rounded hover:bg-white hover:text-black transition uppercase tracking-wider">
+              Shop Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+   </section>
+
+   <include id="footer" src="../../components/footer/footer-component.html"></include>
+
+   <script>
+     
+      document.querySelectorAll("include").forEach((element) => {
+        const filePath = element.getAttribute("src");
+        if (filePath) {
+          fetch(filePath)
+            .then((response) => {
+              if (!response.ok) throw new Error("Component file structurally missing");
+              return response.text();
+            })
+            .then((data) => {
+              element.insertAdjacentHTML("afterend", data);
+              element.remove();
+            })
+            .catch((error) => console.error("Build failure context:", error));
+        }
+      });
+   </script>
+ </body>
+</html>
